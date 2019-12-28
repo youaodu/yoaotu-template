@@ -11,5 +11,11 @@
 
     <artifactId>template-user-controller</artifactId>
 
+    <dependencies>
+        <dependency>
+            <artifactId>template-user-biz</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
+    </dependencies>
 
 </project>

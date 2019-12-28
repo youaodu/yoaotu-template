@@ -20,6 +20,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
+        <dependency>
+            <artifactId>template-user-controller</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
     </dependencies>
 
     <build>

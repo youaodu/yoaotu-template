@@ -16,6 +16,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <artifactId>template-common-biz</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
