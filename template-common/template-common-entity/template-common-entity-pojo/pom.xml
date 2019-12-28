@@ -11,5 +11,15 @@
 
     <artifactId>template-common-entity-pojo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>template-common-entity-model</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
+    </dependencies>
 
 </project>

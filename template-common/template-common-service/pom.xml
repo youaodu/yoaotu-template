@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
+            <artifactId>template-common-dao</artifactId>
+            <groupId>com.youaotu</groupId>
         </dependency>
     </dependencies>
 

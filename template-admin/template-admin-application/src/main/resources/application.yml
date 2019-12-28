@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.apache.http.client.protocol.ResponseProcessCookies: error
+spring:
+  profiles:
+    active: ${profile:dev}

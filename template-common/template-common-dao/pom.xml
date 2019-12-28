@@ -22,5 +22,10 @@
             <groupId>com.youaotu</groupId>
             <artifactId>template-common-entity-pojo</artifactId>
         </dependency>
+
+        <dependency>
+            <artifactId>template-common-framework</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
     </dependencies>
 </project>

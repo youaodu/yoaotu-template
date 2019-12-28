@@ -93,6 +93,12 @@
                 <artifactId>template-admin-controller</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <artifactId>template-common-framework</artifactId>
+                <groupId>com.youaotu</groupId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- =============  自身项目结束 ============= -->
 
             <dependency>
