@@ -11,5 +11,11 @@
 
     <artifactId>template-common-entity-model</artifactId>
 
+    <dependencies>
+        <dependency>
+            <artifactId>template-common-framework</artifactId>
+            <groupId>com.youaotu</groupId>
+        </dependency>
+    </dependencies>
 
 </project>
