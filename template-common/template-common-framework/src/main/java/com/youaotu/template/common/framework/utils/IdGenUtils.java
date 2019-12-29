@@ -13,7 +13,7 @@ public class IdGenUtils {
      * @param idBizCode >>> 业务代码
      * @return
      */
-    public static Long genId(IdBizCode idBizCode) {
+    public static String genId(IdBizCode idBizCode) {
         Integer codeNum = idBizCode.getCodeNum();
 
         // 前缀
@@ -38,14 +38,12 @@ public class IdGenUtils {
         // 进行补位
         String after = StringUtil.patchPosition(increment.intValue(), 7);
         prefix.append(after);
-        return Long.parseLong(prefix.toString());
+        return prefix.toString();
     }
 
 
 
     public static void main(String[] args) {
         IdGenUtils idGenUtils = new IdGenUtils();
-        Long aLong = idGenUtils.genId(IdBizCode.ACCOUNT_ID);
-        System.out.println(aLong);
     }
 }

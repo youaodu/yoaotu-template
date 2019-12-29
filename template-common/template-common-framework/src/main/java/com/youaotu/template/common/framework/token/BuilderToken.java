@@ -128,7 +128,7 @@ public class BuilderToken {
      */
     private static Token paramsToToken(String[] params) {
         Token token = new Token();
-        token.setAccountId("null".equals(params[0]) ? null : Long.parseLong(params[0]));
+        token.setAccountId("null".equals(params[0]) ? null : params[0]);
         token.setAccountName(params[1]);
         token.setExpire("null".equals(params[2]) ? null : Long.parseLong(params[2]));
         token.setStartTime("null".equals(params[3]) ? null : Long.parseLong(params[3]));

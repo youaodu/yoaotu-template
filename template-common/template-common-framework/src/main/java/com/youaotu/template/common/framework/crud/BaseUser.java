@@ -23,11 +23,11 @@ public class BaseUser extends BaseEntity {
     private String pwd;
 
     // 加密后密码
-    @Column(columnDefinition = "VARCHAR(30) COMMENT '密文密码'")
+    @Column(columnDefinition = "VARCHAR(32) COMMENT '密文密码'")
     private String encryPwd;
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
-        this.encryPwd = SecureUtil.md5(pwd);
+        this.encryPwd = SecureUtil.md5(pwd).toUpperCase();
     }
 }

@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Token {
 
-    public Token(Long accountId, String accountName, String channelCode, String appCode) {
+    public Token(String accountId, String accountName, String channelCode, String appCode) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.channelCode = channelCode;
@@ -17,7 +17,7 @@ public class Token {
     public Token() {
     }
 
-    private Long accountId;
+    private String accountId;
 
     private String accountName;
 

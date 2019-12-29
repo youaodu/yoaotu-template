@@ -23,7 +23,7 @@ class TokenInterceptor: HandlerInterceptor {
         // 判断接口是否检验token
         val handlerMethod: HandlerMethod = handler as HandlerMethod
 
-        // 不用token 可过滤
+        // 不用校验 token 可过滤
         if (handlerMethod.method.isAnnotationPresent(WhiteRequest::class.java)) {
             return true
         }

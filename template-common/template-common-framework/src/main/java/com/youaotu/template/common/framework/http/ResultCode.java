@@ -9,7 +9,9 @@ public enum ResultCode {
     SUCCESS("执行成功", 200),
     NO_PERMISS("没有权限", 401),
     ERROE("系统开小差", 500),
-    NO_TOKEN("没有token", 401)
+    NO_TOKEN("没有token", 402),
+    NO_PARAM("参数不能为空", 500),
+    REQUEST_ERROR("请求错误, 请求更换请求方式", 500)
     ;
 
     private String message;

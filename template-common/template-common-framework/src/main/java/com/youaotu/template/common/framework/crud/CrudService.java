@@ -74,4 +74,13 @@ public interface CrudService<T extends Model, R extends CrudRepository> {
         getRepository().delete(t);
     }
 
+    /**
+     * 求count
+     * @param t
+     * @return
+     */
+    default long count(T t) {
+        return getRepository().count(Example.of(t));
+    }
+
 }
