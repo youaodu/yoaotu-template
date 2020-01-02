@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-public class AdminUser extends BaseUser {
+public class AdminAccount extends BaseUser {
 
     @Column(columnDefinition = "bit(1) DEFAULT b'0' COMMENT '该账号是否需要发验证码'")
     private boolean needSms;

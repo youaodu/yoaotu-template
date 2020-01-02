@@ -1,17 +1,13 @@
-package com.youaotu.template.admin.application.config;
+package com.youaotu.template.user.application.config;
 
-import cn.hutool.db.Db;
-import cn.hutool.db.Entity;
-import com.youaotu.template.common.framework.interceptor.TokenInterceptor;
 import com.youaotu.template.common.framework.resolvers.TokenResolvers;
-import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import com.youaotu.template.common.framework.interceptor.TokenInterceptor;
 
-import java.sql.SQLException;
 import java.util.List;
 
 /**

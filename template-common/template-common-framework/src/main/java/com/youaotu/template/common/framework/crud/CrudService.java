@@ -5,6 +5,7 @@ import com.youaotu.template.common.framework.http.ResultPage;
 import org.springframework.data.domain.*;
 import org.springframework.data.jpa.domain.Specification;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -81,6 +82,10 @@ public interface CrudService<T extends Model, R extends CrudRepository> {
      */
     default long count(T t) {
         return getRepository().count(Example.of(t));
+    }
+
+    default List<T> findListByIds(Collection<Long> ids) {
+        return getRepository().findAllById(ids);
     }
 
 }
