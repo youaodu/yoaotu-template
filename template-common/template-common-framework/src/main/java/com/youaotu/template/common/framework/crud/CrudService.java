@@ -66,10 +66,17 @@ public interface CrudService<T extends Model, R extends CrudRepository> {
         }
     }
 
-    default T update(T t) {
+    default T saveOrUpdate(T t) {
         T save = getRepository().saveAndFlush(t);
         return save;
     }
+
+    default List<T> saveOrUpdateBatch(Collection<T> list) {
+        List<T> ts = getRepository().saveAll(list);
+        return ts;
+    }
+
+
 
     default void delete(T t) {
         getRepository().delete(t);

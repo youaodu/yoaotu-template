@@ -35,7 +35,7 @@ public interface CrudController<T extends Model, S extends CrudService> {
 
     @PostMapping("/saveOrUpdate")
     default ResultMessage save(@RequestBody T t) {
-        return ResultMessage.ok(getCrudService().update(t));
+        return ResultMessage.ok(getCrudService().saveOrUpdate(t));
     }
 
     @PostMapping

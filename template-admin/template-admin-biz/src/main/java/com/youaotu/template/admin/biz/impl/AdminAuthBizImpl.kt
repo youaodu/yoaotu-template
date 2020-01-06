@@ -4,7 +4,9 @@ import com.youaotu.template.admin.biz.AdminAuthBiz
 import com.youaotu.template.common.entity.model.AccountRole
 import com.youaotu.template.common.entity.model.Resources
 import com.youaotu.template.common.entity.model.RoleResources
+import com.youaotu.template.common.entity.pojo.dto.admin.AdminCreditDto
 import com.youaotu.template.common.entity.pojo.vo.admin.AdminAuthVo
+import com.youaotu.template.common.entity.pojo.vo.admin.AdminResListVo
 import com.youaotu.template.common.framework.token.Token
 import com.youaotu.template.common.service.AccountRoleService
 import com.youaotu.template.common.service.ResourcesService
@@ -18,7 +20,7 @@ import java.util.stream.Collectors
  * @time 2019-12-30 21:40
  */
 @Service
-class AdminAuthBizImpl: AdminAuthBiz {
+open class AdminAuthBizImpl: AdminAuthBiz {
 
     @Autowired
     lateinit var roleResourcesService: RoleResourcesService
@@ -28,6 +30,7 @@ class AdminAuthBizImpl: AdminAuthBiz {
 
     @Autowired
     lateinit var resourcesService: ResourcesService
+
 
     /**
      * 获取权限树
@@ -49,6 +52,53 @@ class AdminAuthBizImpl: AdminAuthBiz {
         }
 
         return genTree(resources.listIterator(), 0L)
+    }
+
+    /**
+     * 授权
+     */
+    override fun credit(adminCreditDto: AdminCreditDto): Int {
+        val creditList: MutableList<RoleResources> = adminCreditDto.resIds.map {
+            val saveBean = RoleResources()
+            // 单个参数
+            saveBean.resourcesId = it
+            saveBean.roleId = adminCreditDto.roleId
+
+            // 返回对象
+            saveBean
+        }.toMutableList()
+
+        roleResourcesService.saveOrUpdateBatch(creditList)
+        return 1
+    }
+
+    /**
+     * 获取整个资源集合
+     */
+    override fun resList(token: Token): MutableList<AdminResListVo> {
+        val query = AccountRole()
+        query.accountId = token.accountId
+        val findList = accountRoleService.findList(query)
+        TODO("根据角色判断有无权限给Check 赋值")
+//        return showResList(0)
+    }
+
+    private fun showResList(pid: Long, roleId: Array<Long>):MutableList<AdminResListVo> {
+        val query: Resources = Resources()
+        query.pid = pid
+        val findAll = resourcesService.findAll(query)
+        val toMutableList = findAll.map {
+            val resultItem = AdminResListVo()
+            resultItem.id = it.id
+            resultItem.name = it.name
+
+            // 判断
+            TODO("根据角色判断有无权限给Check 赋值")
+//            resultItem.children = showResList(it.id)
+            resultItem
+        }.toMutableList()
+
+        return toMutableList
     }
 
     private fun genTree(list: MutableIterator<Resources>, pid: Long): MutableList<AdminAuthVo> {
