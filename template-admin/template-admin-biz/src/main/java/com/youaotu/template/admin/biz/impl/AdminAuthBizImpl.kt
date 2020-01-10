@@ -78,12 +78,13 @@ open class AdminAuthBizImpl: AdminAuthBiz {
     override fun resList(token: Token): MutableList<AdminResListVo> {
         val query = AccountRole()
         query.accountId = token.accountId
-        val findList = accountRoleService.findList(query)
-        TODO("根据角色判断有无权限给Check 赋值")
-//        return showResList(0)
+
+        // 获取所有的角色
+        val roleIds = accountRoleService.findList(query).map { it.roleId }.toMutableList()
+        return showResList(0, roleIds)
     }
 
-    private fun showResList(pid: Long, roleId: Array<Long>):MutableList<AdminResListVo> {
+    private fun showResList(pid: Long, roleId: List<Long>):MutableList<AdminResListVo> {
         val query: Resources = Resources()
         query.pid = pid
         val findAll = resourcesService.findAll(query)
@@ -92,9 +93,19 @@ open class AdminAuthBizImpl: AdminAuthBiz {
             resultItem.id = it.id
             resultItem.name = it.name
 
-            // 判断
-            TODO("根据角色判断有无权限给Check 赋值")
-//            resultItem.children = showResList(it.id)
+            // 判断选中状态
+            roleId.forEach {
+                val queryRoleHas = RoleResources()
+                queryRoleHas.roleId = it
+                queryRoleHas.resourcesId = resultItem.id
+                val count = roleResourcesService.count(queryRoleHas)
+                // 有权限
+                if (count > 0) {
+                    // 更改选中状态
+                    resultItem.isCheck = true
+                }
+            }
+            resultItem.children = showResList(it.id, roleId)
             resultItem
         }.toMutableList()
 
@@ -114,6 +125,7 @@ open class AdminAuthBizImpl: AdminAuthBiz {
             resultItem.hide = it.hide
             resultItem.name = it.name
             resultItem.path = it.path
+
             // 递归 设置子集
             resultItem.children = genTree(list, it.id)
 
