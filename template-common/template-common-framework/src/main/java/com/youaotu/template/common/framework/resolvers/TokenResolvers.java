@@ -11,8 +11,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
  * 把token解析为入参
- * @author youao.du@gmail.com
- * @time 2019-12-29 16:19
+ * * @time 2019-12-29 16:19
  */
 public class TokenResolvers extends HandlerMethodArgumentResolverComposite implements HandlerMethodArgumentResolver {
 

@@ -17,8 +17,7 @@ import java.util.List;
 /**
  * 防止重复命名, 所以这里的名字是以我的名字命名的.
  * 这里拦截了部分异常
- * @author youao.du@gmail.com
- * @create 2019-08-10 03:41
+ * * @create 2019-08-10 03:41
  */
 public class YouaoduExceptionHandler {
 
@@ -27,8 +26,7 @@ public class YouaoduExceptionHandler {
 
     /**
      * 统一处理业务错误 >>> 防止报400
-     * @author youao.du@gmail.com
-     * @time 03:48
+     * * @time 03:48
      * @params
      */
     @ExceptionHandler(value = BusinessException.class)
@@ -39,8 +37,7 @@ public class YouaoduExceptionHandler {
 
     /**
      * 处理校验参数
-     * @author youao.du@gmail.com
-     * @time 22:39
+     * * @time 22:39
      * @params e
      */
     @ExceptionHandler(value = BindException.class)
@@ -59,8 +56,7 @@ public class YouaoduExceptionHandler {
 
     /**
      * 处理校验参数
-     * @author youao.du@gmail.com
-     * @time 22:39
+     * * @time 22:39
      * @params e
      */
     @ExceptionHandler(value = MethodArgumentNotValidException.class)

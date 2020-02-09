@@ -15,8 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 16:40
+ * * @time 2019-12-29 16:40
  */
 @Service
 class AdminLoginBizImpl: AdminLoginBiz {

@@ -6,8 +6,7 @@ import lombok.Data;
 import javax.persistence.Entity;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 23:36
+ * * @time 2019-12-29 23:36
  */
 @Data
 @Entity

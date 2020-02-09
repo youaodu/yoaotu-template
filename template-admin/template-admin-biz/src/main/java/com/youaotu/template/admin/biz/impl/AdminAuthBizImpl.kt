@@ -16,8 +16,7 @@ import org.springframework.stereotype.Service
 import java.util.stream.Collectors
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-30 21:40
+ * * @time 2019-12-30 21:40
  */
 @Service
 open class AdminAuthBizImpl: AdminAuthBiz {

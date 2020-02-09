@@ -12,23 +12,20 @@ import org.slf4j.LoggerFactory;
 import java.util.StringJoiner;
 
 /**
- * @author youao.du@gmail.com
- * @create 2019-08-10 11:57
+ * * @create 2019-08-10 11:57
  */
 public class BuilderToken {
 
     /**
      * 私钥 >>> 随机生成的
-     * @author youao.du@gmail.com
-     * @time 05:44
+     * * @time 05:44
      */
     private static byte[] privateKey = new byte[]{37, -118, 37, 55, -118, -46, 73, 95, 60, -36, -118, -120, 31, 12, -44, -96};
 
     /**
      * token 过期时间  默认3天
      *
-     * @author youao.du@gmail.com
-     * @time 05:53
+     * * @time 05:53
      */
     private static Long expire = 60 * 60 * 24 * 3L;
 
@@ -39,8 +36,7 @@ public class BuilderToken {
      * 解析Token
      *
      * @param tokenStr
-     * @author youao.du@gmail.com
-     * @time 12:12
+     * * @time 12:12
      */
     public static Token analysisToken(String tokenStr) {
         if (StrUtil.isBlank(tokenStr)) {
@@ -58,8 +54,7 @@ public class BuilderToken {
      * 生成Token
      *
      * @param token
-     * @author youao.du@gmail.com
-     * @time 05:37
+     * * @time 05:37
      */
     public static String builderToken(Token token) {
         // 转换
@@ -81,8 +76,7 @@ public class BuilderToken {
      *
      * @param token
      * @return 正确 >>> true  错误 >>> false
-     * @author youao.du@gmail.com
-     * @time 06:17
+     * * @time 06:17
      */
     public static boolean validateToken(String token) {
         if (StrUtil.isBlank(token)) {
@@ -123,8 +117,7 @@ public class BuilderToken {
     /**
      * 参数转Token
      *
-     * @author youao.du@gmail.com
-     * @time 06:21
+     * * @time 06:21
      */
     private static Token paramsToToken(String[] params) {
         Token token = new Token();

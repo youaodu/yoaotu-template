@@ -7,8 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 23:38
+ * * @time 2019-12-29 23:38
  */
 @Data
 @Entity

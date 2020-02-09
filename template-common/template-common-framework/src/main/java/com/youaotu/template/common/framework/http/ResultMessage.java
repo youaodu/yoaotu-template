@@ -1,8 +1,7 @@
 package com.youaotu.template.common.framework.http;
 
 /**
- * @author youao.du@gmail.com
- * @create 2019-08-10 03:13
+ * * @create 2019-08-10 03:13
  */
 public class ResultMessage<T> {
     private Integer state;

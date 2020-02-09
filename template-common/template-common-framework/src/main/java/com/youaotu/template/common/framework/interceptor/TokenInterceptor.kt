@@ -8,15 +8,13 @@ import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 /**
- * @author youao.du@gmail.com
- * @create 2019-08-11 06:12
+ * * @create 2019-08-11 06:12
  */
 class TokenInterceptor: HandlerInterceptor {
 
     /**
      * 效验Token
-     * @author youao.du@gmail.com
-     * @time 06:13
+     * * @time 06:13
      * @params [request, http, handler]
      */
     override fun preHandle(request: HttpServletRequest, response: HttpServletResponse, handler: Any): Boolean {

@@ -12,8 +12,7 @@ import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author youao.du@gmail.com
- * @create 2019-08-13 00:04
+ * * @create 2019-08-13 00:04
  */
 @Component
 public class RedisUtils {
@@ -23,8 +22,7 @@ public class RedisUtils {
 
     /**
      * 获取
-     * @author youao.du@gmail.com
-     * @time 00:06
+     * * @time 00:06
      * @params key
      */
     public String getStr(String key) {
@@ -33,8 +31,7 @@ public class RedisUtils {
 
     /**
      * 获取Long
-     * @author youao.du@gmail.com
-     * @time 16:48
+     * * @time 16:48
      * @param key
      */
     public Long getLong(String key) {
@@ -51,8 +48,7 @@ public class RedisUtils {
 
     /**
      * 数值增加
-     * @author youao.du@gmail.com
-     * @time 00:22
+     * * @time 00:22
      * @param key
      * @param add
      */
@@ -66,8 +62,7 @@ public class RedisUtils {
 
     /**
      * 当字符串为Json格式时, 可转换对象 >>> 会返回空
-     * @author youao.du@gmail.com
-     * @time 00:08
+     * * @time 00:08
      * @params [key, beanClass]
      */
     public <T> T getJsonToBean(String key, Class<T> beanClass) {
@@ -80,8 +75,7 @@ public class RedisUtils {
 
     /**
      * 存值 key, value
-     * @author youao.du@gmail.com
-     * @time 00:21
+     * * @time 00:21
      * @params [key, value]
      */
     public String set(String key, String value) {
@@ -94,8 +88,7 @@ public class RedisUtils {
 
     /**
      * 存值 key, value, time  >>>  时间单位: 秒
-     * @author youao.du@gmail.com
-     * @time 00:22
+     * * @time 00:22
      * @params [key, value, time]
      */
     public void set(String key, String value, Long time) {
@@ -106,8 +99,7 @@ public class RedisUtils {
 
     /**
      * 存值 >>> JSON
-     * @author youao.du@gmail.com
-     * @time 00:23
+     * * @time 00:23
      * @params [key, value]
      */
     public <T> void setBean(String key, T value) {
@@ -118,8 +110,7 @@ public class RedisUtils {
 
     /**
      * 存值 >>> JSON 时间单位: 秒数
-     * @author youao.du@gmail.com
-     * @time 00:29
+     * * @time 00:29
      * @params [key, value, time]
      */
     public <T> void setBean(String key, T value, Long time) {

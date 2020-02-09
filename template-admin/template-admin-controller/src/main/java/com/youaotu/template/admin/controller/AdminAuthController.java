@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-30 20:27
+ * * @time 2019-12-30 20:27
  */
 @RestController
 @RequestMapping("/auth")

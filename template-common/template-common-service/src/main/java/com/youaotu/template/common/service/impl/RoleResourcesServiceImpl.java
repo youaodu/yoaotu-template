@@ -8,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 23:58
+ * * @time 2019-12-29 23:58
  */
 @Service
 public class RoleResourcesServiceImpl implements RoleResourcesService {

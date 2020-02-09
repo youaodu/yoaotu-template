@@ -6,8 +6,7 @@ import com.youaotu.template.common.entity.pojo.vo.admin.AdminResListVo
 import com.youaotu.template.common.framework.token.Token
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-30 21:40
+ * * @time 2019-12-30 21:40
  */
 interface AdminAuthBiz {
 

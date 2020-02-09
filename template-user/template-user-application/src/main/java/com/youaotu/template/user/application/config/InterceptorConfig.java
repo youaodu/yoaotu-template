@@ -11,8 +11,7 @@ import com.youaotu.template.common.framework.interceptor.TokenInterceptor;
 import java.util.List;
 
 /**
- * @author youao.du@gmail.com
- * @create 2019-08-11 06:36
+ * * @create 2019-08-11 06:36
  */
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurationSupport {

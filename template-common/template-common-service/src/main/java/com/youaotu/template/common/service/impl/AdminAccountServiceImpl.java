@@ -8,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 17:05
+ * * @time 2019-12-29 17:05
  */
 @Service
 public class AdminAccountServiceImpl implements AdminAccountService {

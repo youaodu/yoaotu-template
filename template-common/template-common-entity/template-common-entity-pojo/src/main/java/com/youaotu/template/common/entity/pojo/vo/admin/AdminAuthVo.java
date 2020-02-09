@@ -5,8 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-30 21:41
+ * * @time 2019-12-30 21:41
  */
 @Data
 public class AdminAuthVo {

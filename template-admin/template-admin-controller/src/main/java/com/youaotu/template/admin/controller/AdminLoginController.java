@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @author youao.du@gmail.com
- * @time 2019-12-29 16:30
+ * * @time 2019-12-29 16:30
  */
 @RestController
 @RequestMapping("/login")
